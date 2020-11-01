@@ -4,3 +4,4 @@
     name: "{{ item.name }}"
     password: "{{ item.password }}"
   with_items: "{{ system_users }}"
+  when: system_users is defined
