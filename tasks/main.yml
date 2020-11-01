@@ -1,0 +1,6 @@
+- name: Create users and set their password
+  become: True
+  user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+  with_items: "{{ system_users }}"
